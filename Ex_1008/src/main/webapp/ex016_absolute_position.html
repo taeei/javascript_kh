@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>absolute position</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			
+			.box{ width:250px;
+				  border:1px solid red;
+				  margin:80px;
+				  
+				  /* absolute를 사용하는 경우 기본값은 부모가 body임. 
+				  	 box가 기준(부모)이 되고 싶을 때 */
+				  position:relative; }
+				  
+			p{ width:130px;
+			   height:80px;
+			   padding:10px;
+			   color:#fff; }
+			   
+			.p_red{ background:red; }
+			
+			.p_blue{ background:blue;
+					 position:absolute;
+					 left:50px;
+					 top:30px; }
+			
+			.p_green{ background:green; }
+			
+		</style>
+	</head>
+	
+	
+	<body>
+		<div class="box">
+			<p class="p_red">포지션 테스트</p>
+			<p class="p_blue">포지션 테스트</p>
+			<p class="p_green">포지션 테스트</p>
+		</div>
+	</body>
+</html>

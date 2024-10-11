@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>왼쪽, 오른쪽 정렬(float)</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			#container{ width:500px;
+					    margin:10px auto;
+					    background:#fdd;
+					    padding:10px;
+					    border:5px solid #caa;
+					    
+					    /* 자식들이 float을 가지고 있으면 여전히 자식이라는 overflow를 사용해야함 */
+					    overflow:hidden; } /* float의 해제 */
+					    
+		     h1{ text-align: center; }
+		     
+		     .c1{ width:200px;
+		          padding:15px;
+		          background:#dda;
+		          
+		          /* float을 사용하면 부모에게 영향을 받지 않고
+		             공중에 떠오른 형태가 된다.
+		             이 상태라면 부모가 현재 객체를 자식으로 인지하지 못하므로
+		             overflow 인 float의 해제가 필요함 */
+		          float:left; }
+		          
+		     .c2{ width:200px;
+		          padding:15px;
+		          background:#ba7; 
+		          float:right;}
+		          
+		          
+		</style>
+	</head>
+	
+	
+	<body>
+		<div id="container">
+			<h1>캐치티니핑</h1>
+			
+			<div class="c1">
+				사랑의 하츄핑 용기를 줘 아자핑
+			</div>
+			
+			<div class="c2">
+				사랑의 하츄핑 용기를 줘 아자핑
+			</div>
+		
+		</div>
+	</body>
+</html>

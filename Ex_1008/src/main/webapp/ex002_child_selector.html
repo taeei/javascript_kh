@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자식 선택자</title>
+		
+		<style>
+			/* > : 자식요소만 디자인 설정 하고 싶을 때 */
+			#header > h1{color:red;}
+			#content > h1{color:blue;}
+		</style>
+	</head>
+	
+	
+	<body>
+		<div id="header">
+			<h1>타이틀 메뉴</h1>
+			
+			<div>
+				<h1>하위메뉴1</h1>
+			</div>
+			
+			<div>
+				<h1>하위메뉴2</h1>
+			</div>
+			
+		</div>
+		
+		<div id="content">
+			<h1>메인 컨텐츠</h1>
+			<div>
+				<h1>메인컨텐츠2</h1>
+			</div>
+		</div>
+	</body>
+</html>

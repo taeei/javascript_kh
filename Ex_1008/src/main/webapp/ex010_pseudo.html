@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>nth-child 가상클래스</title>
+		
+		<style>
+			/* 홀수번째 위치로 접근 */
+			li:nth-child(odd){color:red;}
+			
+			/* 짝수번째 위치로 접근 */
+			li:nth-child(even){color:green;}
+			
+			/* 4의 배수만 변경 */
+			li:nth-child(4n){background:yellow;}
+			
+			/* 특정 태그 위치 지정 */
+			/* 6번째만 변경 */
+			li:nth-child(6){color:black;}
+		</style>
+	</head>
+	
+	
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+	</body>
+</html>

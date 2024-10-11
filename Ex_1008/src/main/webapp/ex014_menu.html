@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>메뉴</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			
+			li{list-style:none;}
+			
+			.menu{ overflow:hidden; }
+			
+			a{ text-decoration:none; }
+			
+			.menu > li >a{
+				border: 1px solid black;
+				width:50px;}
+				
+			.menu >li{display:inline;}
+			
+			li{ float:left; }
+			
+			.menu li a{
+				display:block;
+				padding:10px;}
+				
+			.submenu li{ border:1px solid black; }
+			
+			.submenu{ display:none; }
+			
+			/* .menu > li 마우스 올렸을 때 .submenu를 변경 */
+			.menu > li:hover .submenu{ display:block; }
+		</style>
+	</head>
+	
+	
+	<body>
+		<ul class="menu">
+			<li>
+				<a href="#">메뉴</a>
+				
+				<ul class="submenu">
+					<li><a href="#">짜장면</a></li>					
+					<li><a href="#">짬뽕</a></li>					
+					<li><a href="#">탕수육</a></li>					
+				</ul>
+				
+			</li>
+		</ul>
+	</body>
+	
+</html>

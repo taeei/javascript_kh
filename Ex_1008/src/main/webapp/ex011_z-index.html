@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>z-index</title>
+		
+		<style>
+			p{ border:1px solid black; 
+			   width:80px;
+			   height:80px; 
+			   position:absolute; /* 모든 객체의 위치가 0, 0 */
+			   }
+			   
+			.box1{ background:yellow;
+				   left:100px;	/* 위치조정 */
+				   top:100px;
+				   /* z-index가 클수록 앞에 위치함 */
+				   z-index:3; }
+				   
+			.box2{ background:orange;
+			       left:120px;
+			       top:120px;
+			       z-index:2; }
+			
+			.box3{ background:teal; 
+			       left:140px;
+			       top:140px;
+			       z-index:1;}
+		</style>
+	</head>
+	
+	
+	<body>
+		<p class="box1">박스1</p>
+		<p class="box2">박스2</p>
+		<p class="box3">박스3</p>
+	</body>
+</html>

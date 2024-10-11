@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>예제2</title>
+		
+		<link rel="stylesheet" href="css/reset.css"/>
+		<style>
+			.menu{ overflow:hidden; }
+			
+			.menu > li{ float:left; }
+			
+			
+			.menu > li{ background: black;
+					  padding: 30px;
+					  font-weight:bold; }
+					  
+			.submenu > li { float: left }
+			
+			.submenu > li { background: dimgray;
+							padding: 30px; }
+			
+			.menu a{ color:#fff; }
+			
+			.submenu{ display: none; }
+			
+			.menu > li:hover .submenu{ display: block; }
+			
+			.submenu > li:hover{ color:gray; }
+		</style>
+	</head>
+	
+	
+	<body>
+		<ul class="menu">
+			
+			<li><a href="#">홈</a></li>
+		
+			<li>
+				<a href="#">서비스</a>
+				<ul class="submenu">
+					<li><a href="#">웹 개발</a></li>
+					<li><a href="#">앱 개발</a></li>
+					<li><a href="#">디자인</a></li>
+				</ul>
+			</li>
+		
+			<li><a href="#">소개</a></li>
+			<li><a href="#">연락처</a></li>
+			
+		</ul>
+	</body>
+</html>

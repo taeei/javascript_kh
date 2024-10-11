@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>absolute</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			
+			.box{ width:130px;
+				  height:80px;
+				  margin:40px; 
+				  border:1px solid red;}
+				  
+			p{ width:130px;
+			   height:80px;
+			   color:#fff; }
+		
+			.p_red{ background:red; }
+		
+			.p_blue{ background:blue;
+			
+					/* 해당 클래스만 위로 뜬다. */
+				     position:absolute; }
+		
+			.p_green{ background:green; }
+		
+		</style>
+	</head>
+	
+	
+	<body>
+		<div class="box">
+			<p class="p_red">포지션 테스트</p>
+			<p class="p_blue">포지션 테스트</p>
+			<p class="p_green">포지션 테스트</p>
+		</div>
+	</body>
+</html>
