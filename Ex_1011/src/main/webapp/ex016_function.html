@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 함수3</title>
+		
+		<script>
+			
+			function func_hide(){
+				
+				// 숨기기 버튼을 클릭했을 때 호출되는 함수
+				
+				// 이미지 태그 검색
+				let img = document.getElementById('iam_img');
+				
+				// 이미지 태그의 displayt속성을 none(숨김)으로 변경
+				img.style.display = 'none';
+					
+			}
+			
+			function func_show(){
+				
+				let img = document.getElementById('iam_img');
+				img.style.display = 'block';
+				
+			}
+			
+		</script>
+	</head>
+	
+	
+	<body>
+		<input type="button" value="숨기기" onclick="func_hide();">
+		<input type="button" value="보이기" onclick="func_show();">
+		
+		<br>
+		
+		<img  id="iam_img" src="image/float.jpg"/>
+		
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 배열</title>
+		
+		<script>
+			// int[] arr = new int[4];
+			
+			// 자바스크립트의 배열은 index 갯수에 제한이 없다.
+			// 원하는 타입을 하나의 배열에 집어 넣을 수 있다.
+			let money = new Array(0);
+			money[0] = 10;
+			money[1] = "홍길동";
+			money[2] = 3.14;
+			money[3] = 40;
+			money[4] = 50;
+			
+			for(let i = 0; i < money.length; i++){
+				document.write(money[i] + "<br>");
+			}
+			
+			document.write("<hr>");
+			
+			let arr = [1, 2, 3, '문자열', 3.14];
+			arr[5] = 100;
+			arr[8] = 20;
+			for(let i = 0; i < arr.length; i++){
+				document.write(arr[i] + "<br>");
+				
+				// 브라우저의 console에 메세지를 출력하는 코드
+				console.log( "log : " + i );
+			}
+			
+			document.write("<hr>");
+			
+			// 2차원 배열
+			let array = new Array(2);
+			array[0] = new Array(2);
+			array[1] = new Array(3);
+			
+			array[0][0] = 10;
+			array[0][1] = 20;
+			
+			array[1][0] = 30;
+			array[1][1] = 40;
+			array[1][2] = 50;
+			
+			// 2차원 배열의 선언, 생성, 초기화
+			//let array = new Array(); 	
+			let first = [10, 20];
+			let second = [30, 40, 50];
+			array[0] = first;
+			array[1] = second;
+			
+			for(let i = 0; i < array.length; i++){
+				for(let j = 0; j < array[i].length; j++){
+					document.write(array[i][j] + "<br>");
+				}
+			}	
+					
+		</script>
+	</head>
+	
+	
+	<body>
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

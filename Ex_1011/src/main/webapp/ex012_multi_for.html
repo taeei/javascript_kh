@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>multi for</title>
+		
+		<script>
+			
+			// 구구단
+			for(let i=2; i <=9; i++){
+				document.write("<h2>", i, "단</h2>", "<br>");
+				for(let j=1; j<=9; j++){
+					document.write(i, " * ", j, " = ", i*j, "<br>");
+				}
+			}	
+			
+			document.write("<hr>");
+			
+			document.write('<table border="1">');
+			for(let i = 2; i <= 9; i++){
+				
+			
+				document.write("<tr>");
+				dodument.write("<td>", i, "단</td>")
+				for(let j = 1; j <= 9; j++){
+					document.write("<td>", i, "*", j, "=", i*j, "<br>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+			
+			
+		</script>
+	</head>
+	
+	
+	<body>
+	
+	</body>
+</html>

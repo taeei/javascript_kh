@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 함수</title>
+		
+		<script>
+			function send(){
+				// 버튼1을 클릭하면 호출되는 함수
+				alert("버튼1 클릭함");
+			}
+			
+			function send2(n){
+				alert(n);
+			}
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<input type="button" value="버튼1" onclick="send();">
+		<input type="button" value="버튼2" onclick="send2(10);">
+		<input type="button" value="버튼3" onclick="send2('홍길동');">
+	</body>
+</html>

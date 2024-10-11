@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>if</title>
+		
+		<script>
+			let num1 = Number(prompt("수1 : "));
+			let num2 = Number(prompt("수2 : "));
+			
+			if( num1 >= 80 && num2 >= 80 ){
+				document.write("합격");
+			}else{
+				document.write("불합격");
+			}
+			
+			document.write("<hr>");
+			
+			// 프롬프트를 통해 정수값을 받고
+			// 점수에 따라 아래의 결과를 출력해보자
+			//-----------------------
+			// 점수 : 50
+			// 성적 : F
+			//-------------------
+			// 90 ~ : A
+			// 80 ~ : B
+			// 70 ~ : C
+			// 60 ~ : D
+			// ~ 59 : F
+			
+			let num = Number(prompt("점수 : "));
+			if( num >= 90 ){
+				document.write("성적 : A");
+			} else if( num >= 80 ){
+				document.write("성적 : B")
+			} else if( num >= 70 ){
+				document.write("성적 : C")
+			} else if( num >= 60 ){
+				document.write("성적 : D")
+			} else {
+				document.write("성적 : F")
+			}
+			
+				
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

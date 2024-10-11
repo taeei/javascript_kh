@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>for1</title>
+		
+		<script>
+			for( let i = 1; i <= 10; i++ ){
+			document.write(i+"<br>"); 
+			}
+			
+			document.write("<hr>");
+			
+			let dan = Number(prompt("수 : "));
+			
+			// 정규식 : 특정한 규칙을 가진 문자열의 집합
+			let number_p = /^[2-9]*$/;
+			if( !number_p.test( dan ) ){
+				alert("올바른 값을 입력하세요");
+				
+				// if문에서 스크립트를 종료하기 위해 return을 사용
+				//return; 
+			}
+			
+			for( let i = 1; i <= 9; i++){
+				document.write(dan + " * " + i + " = " + (dan*i) + "<br>");
+			}
+			
+		
+		</script>
+		</head>
+		
+		
+	<body>
+	
+	</body>
+</html>

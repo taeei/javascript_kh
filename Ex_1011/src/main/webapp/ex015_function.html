@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 함수2</title>
+		
+		<script>
+			
+			// 일반 변수는 script영역에서 정의하고 다른 함수들이 참조 가능
+			let divtag;
+
+			// 검색코드는 '반드시'' 함수 안에서 정의되어야 한다
+			// document.getElementById("mydiv");
+			
+			function send(){
+				
+				let divtag = document.getElementById("mydiv");
+				
+				// id가 event_txt인 태그를 검색
+				let txt = document.getElementById('event_txt'); // input 입력상자를 통째로 넘김
+				
+				divtag.innerHTML = txt.value;
+				
+				// 위에서 검색한 태그의 value를 가져온다
+				let result = txt.value;
+				
+				alert(result);
+			
+			}
+			
+			function send2(v){
+				let input = document.getElementById('txt1');
+				input.value = v;
+			}
+			
+			function greet(n){
+				let text = document.getElementById('txt1');
+				text.value = n;
+		
+				//만들어둔 p태그 검색
+				let ptag = document.getElementById("myp");
+				ptag.innerHTML = n; 	
+				
+			}
+			
+		</script>
+	</head>
+	
+	
+	<body>
+		<input type="text" id="event_txt" value="" placeholder="정수를 입력하세요">
+		<input type="button" value="확인" onclick="send()">
+		
+		<br>
+		
+		<!-- 기본값이 text 타입 -->
+		<input id="txt1">
+		<input type="button" value="테스트" onclick="send2('hi')">
+		
+		<br>
+		
+		<input type="button" value="내용1" onclick="greet('안녕하세요')" >
+		<input type="button" value="내용2" onclick="greet('반갑습니다')" >
+	
+		<p id="myp"></p>
+		<div id="mydiv"></div>
+	</body>
+</html>
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>operator5</title>
+		
+		<script>
+			let num1 = 200;
+			let num2 = 300;
+			
+			// String : 정수를 문자열 형태로 변환
+			let res = String(num1) + num2;
+			document.write(res + "<br>");
+			
+			let s_number = "10";			
+
+			// Number :  정수 형태의 문자열을 실제 정수로 바꾼다
+			let n = Number(s_number) + 10;
+			document.write(n); 
+			
+			document.write("<hr>");
+			
+			// 국어, 영어, 수학 점수를 prompt로 받는다
+			// 입력받은 세 과목의 총 합과 평균을 출력
+			
+			let korean = prompt("국어 점수는?");
+			// let korean = Number( prompt("국어 점수는?") );
+			let english = prompt("영어 점수는?");
+			let math = prompt("수학 점수는?");
+			
+			let sum = Number(korean) + Number(english) + Number(math);
+			let avg = sum / 3;
+			
+			document.write("총 합 : " + sum + "<br>");
+			document.write("평균 : " + avg.toFixed(2));
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
