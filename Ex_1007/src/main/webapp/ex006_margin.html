@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>margin(바깥쪽 여백)</title>
+		
+		<style>
+			div{border:5px solid blue;}
+			/* 여백이 두 개가 겹치면 더 큰 값으로 여백 지정됨 */
+			.box1{ margin:20px; } /*상하좌우*/
+			.box2{ margin:30px 50px; } /*상하, 좌우*/
+			.box3{ margin:20px 50px 30px; } /*상, 좌우, 하*/
+			.box4{ margin:50px 60px 70px 0; } /*상 우 하 좌*/
+			
+		</style>
+	</head>
+	
+	
+	<body>
+		<div class="box1">뜨거운 승부 부트핑</div>
+		<div class="box2">뜨거운 승부 부트핑</div>
+		<div class="box3">뜨거운 승부 부트핑</div>
+		<div class="box4">뜨거운 승부 부트핑</div>
+	</body>
+</html>
