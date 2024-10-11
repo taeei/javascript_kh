@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layout</title>
+		
+		<link rel="stylesheet" href="css/reset.css"/>
+		<style>
+			body{ width:960px;
+				  margin:0 auto;
+				  border:1px solid red; }
+				  
+			#header{ position:relative;
+					 height:150px; }
+					 
+			#hgroup{ position:absolute;
+					 left:5px;
+					 top:10px; }
+					 
+			#a1{ position:absolute;
+				 right:0;
+				 top:3px; }		
+				 
+			li{ float:left; }
+			ul{ overflow:hidden; } 
+			
+			/* 겹치는 부분 중복돼서 겹치지 않게 선 생성하기 */
+			#a1 ul li{ border-right:1px solid gray;
+					   border-top:1px silod gray;
+					   border-bottom:1px solid gray; }	   
+			#a1 ul li:first-child{ border-left:1px solid gray; }
+			
+			/* a1 디자인, 마우스 올렸을 때 */
+			#a1 ul li a{ display:block;
+					     padding:2px 10px;
+					     color:#666; }
+					     
+			#a1 ul li a:hover{ background:#999;
+			  				   color:#fff; }
+			  				   
+			#a2{ position:absolute;
+				 right:0;
+				 bottom:0; }
+				 
+			#a2 ul li{ border-right:1px solid gray;
+					   border-top:1px solid gray;
+					   border-bottom:1px solid gray; }
+			#a2 ul li:first-child{ border-left:1px solid gray; }
+			
+			/* a1 디자인, 마우스 올렸을 때 */
+			#a2 ul li a{ display:block;
+						 padding:10px 20px;
+						 color:#666; }
+						 
+			#a2 ul li a:hover{ background:#aaf;
+							   color:#fff; }
+			
+		</style>
+	</head>
+	
+	
+	<body>
+		<div id="header">
+			
+			<div id="hgroup">
+				<h1>Rint Development</h1>
+				<h2>HTML +CSS</h2>
+			</div>
+			
+			<div id="a1">
+				<ul>
+					<li><a href="#">WEB</a></li>
+					<li><a href="#">MOBILE</a></li>
+					<li><a href="#">GAME</a></li>
+					<li><a href="#">SIMULATION</a></li>
+					<li><a href="#">DATA</a></li>
+				</ul>
+			</div>
+			
+			<div id="a2">
+				<ul>
+					<li><a href="#">HTML5</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">Spring</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>fixed</title>
+		
+		<link rel="stylesheet" href="css/reset.css"/>
+		
+		<style>
+			#container{ width:300px;
+						height:1500px;
+						background:#999;
+						color:#fff; }
+			
+			#header{ width:200px;
+					 height:200px;
+					 background:#000;
+					 color:#fff;
+					 
+					 /* absolute처럼 원하는 좌표에 객체를 위치시킬 수 있다.
+					 	스크롤을 내렸을 때도 위치 고정 */
+					 position:fixed;
+					 left:350px;
+					 top:30px; }
+			
+		</style>
+	
+	</head>
+	
+	
+	<body>
+		<div id="header">
+			<p>나는 헤더</p>
+		</div>
+		
+		<div id="container">
+			<p>나는 내용</p>
+		</div>
+		
+		<div id="footer">
+			<p>Copyright Allright reserved</p>
+		</div>
+	</body>
+</html>

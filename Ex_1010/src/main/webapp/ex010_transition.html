@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>transition</title>
+		
+		<style>
+			div{ width:100px;
+				 height:100px; 
+				 background:plum;
+				 
+				 /* hover를 통해 변경되는 속성인
+				 background, border-radius에 대해서
+				 애니메이션 처리가 가능하도록 하는 설정 */
+				 transition-property:background, border-radius;	/* 바뀔 속성 */
+				 transition-duration:2s; /* n초간 진행 */ 
+				 transition-delay:1s; /* n초 후 애니메이션 시작 */
+				 
+				 -webkit-transition-property:background, border-radius;
+				 -webkit-transition-duration:2s;
+				 -webkit-transition-delay:1s; 
+				 
+				 -moz-transition-property:background, border-radius;
+				 -moz-transition-duration:2s;
+				 -moz-transition-delay:1s; 
+				 }
+				 
+				 /*
+				 브라우저의 종류에 따라 애니메이션 처리가 잘 되지 않는 경우가 있어서
+				 특정 키워드를 통해 호환성을 높여준다.
+				 -webkit- : 크롭, 사파리 브라우저
+				 -moz- : 파이어폭스 브라우저
+				 -o- : 오페라 브라우저
+				 -ms- : 익스플로러, 엣지
+				 */
+				 
+			div:hover{ background:lightskyblue;
+					   border-radius:50px; }
+					   
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			
+			
+		</div>
+	</body>
+</html>
