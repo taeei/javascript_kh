@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>create</title>
+		
+		<script>
+			// 브라우저에 시작과 함께 동작하는 메서드. 따로 호출 x해도 실행
+			window.onload = function(){
+				
+				let mainDiv = document.getElementById("main_div");
+				
+				// main div에 넣을 새로운 div생서
+				// newDiv ---> <div></div>
+				let newDiv = document.createElement("div");
+				
+				newDiv.innerHTML = "안녕";
+				
+				//main_div요소에 새로 만든 newDiv요소를 추가
+				mainDiv.appendChild(newDiv);
+				
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<div id="main_div">
+			Main DIV
+		</div>
+		
+		<input type="button" value="추가" onclick="add();">
+	</body>
+</html>

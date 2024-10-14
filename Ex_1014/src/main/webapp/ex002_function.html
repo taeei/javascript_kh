@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			
+			function send(){ 
+				let divtag = document.getElementById("mydiv");
+				
+				let nametag = document.getElementById("name");
+				let agetag = document.getElementById("age");
+				let phonetag = document.getElementById("phone");
+				
+				// 유효성 체크
+				if( nametag.value.trim() == '' ){	// 이름이 비어있으면
+					alert("이름을 입력하세요");
+					return;
+				}
+				
+				let p_age = /^[0-9]*$/;
+				// age,\.valeu의 값이 아니면 if문 들어오기
+				if( !p_age.test( agetag.value ) ){
+					alert("나이는 정수로 입력하세요");
+				}
+				
+				let p_tel = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+				if( !p_tel.test( phonetag.value )){
+					alert("올바른 전화번호 형식이 아닙니다");
+					return;
+				}
+				
+				
+				divtag.innerHTML = "이름 : " + nametag.value + "<br>" +
+								   "나이 : " + agetag.value + "<br>" + 
+								   "전화번호 : " + phonetag.value;
+			
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<input type="text" id="name" value="" placeholder="이름"><br>
+		<input type="text" id="age" value="" placeholder="나이"><br>
+		<input type="text" id="phone" value="" placeholder="전화번호"><br>
+		
+		<input type="button" value="확인" onclick="send()">
+		
+		<div id="mydiv"></div>
+	</body>
+</html>

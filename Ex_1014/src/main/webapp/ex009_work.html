@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>난수 예제</title>
+		
+		<style>
+			hr{background:blue;
+			   height:2px;
+			   width:600px;}
+		</style>
+		
+		<script>
+			window.onload = function(){
+				
+				let mainDiv = document.getElementById("wrap");
+				let rndDiv = document.createElement("div");
+				
+				let rnd = Math.floor(Math.random() * 100) + 1;
+				rndDiv.innerHTML = rnd;
+				
+			}
+			
+			function check(){
+				let input = document.getElementById("num");
+				
+				if( input.value == rnd ) {
+					 
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			<p>1~100사이의 숫자 중 하나를 입력해서 정답을 맞혀보세요</p>
+			<input type="text" id="num" value="">
+			<input type="button" value="확인" onclick="check();">
+			<p id="text"></p>
+			<hr>s
+		</div>
+		
+	</body>
+</html>

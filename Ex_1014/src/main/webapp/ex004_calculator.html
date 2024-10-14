@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			table{border-collapse:collapse;}
+			
+			/* 원하는 타입(text)만 지정 */ 
+			input[type=text]{outline:none;
+				  border-style:none;}
+		</style>
+		
+		<script>
+			function cal(n){
+				let num1 = Number(document.getElementById("num1").value);
+				let num2 = Number(document.getElementById("num2").value);
+
+				let btn = document.getElementById("btn")
+				
+				let result = "";
+				
+				switch( n ){
+					case '+':
+						result = num1 + num2;
+						break;
+					case '-':
+						result = num1 - num2;
+						break;
+					case '*':
+						result = num1 * num2;
+						break;
+					case '/':
+						// 0으로 나누면 결과 0 출력
+						result = num2 == 0 ? 0 : (num1 / num2).toFixed(2);
+						break;
+					default:
+						break;
+				} //switch
+				
+				let num3 = document.getElementById("res");
+				
+				num3.innerHTML = result;
+				
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<table border="1">
+			<tr>
+				<th>수1</th>
+				<td><input type="text" id="num1" value="" placeholder="수1"></td>
+			</tr>
+			
+			<tr>
+				<th>수2</th>
+				<td><input type="text" id="num2" value="" placeholder="수2"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" id="btn" value="+" onclick="cal('+')">
+					<input type="button" id="btn" value="-" onclick="cal('-')">
+					<input type="button" id="btn" value="*" onclick="cal('*')">
+					<input type="button" id="btn" value="/" onclick="cal('/')">
+				</td>
+			</tr>
+		
+			<tr>
+				<th>수3</th>
+				<td id="res"></td>
+			</tr>
+		</table>
+	</body>
+</html>

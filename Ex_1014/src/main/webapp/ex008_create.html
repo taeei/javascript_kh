@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>구구단 예제</title>
+		
+		<style>
+			#wrap{border-left:5px solid skyblue;
+				  height:230px;
+				  }
+		</style>
+		
+		<script>
+			
+			window.onload = function(){
+				
+				let selDiv = document.getElementById("num");
+				for(let i = 2; i <= 9; i++){
+					let op = document.createElement("option");
+					
+					op.innerHTML = i+"단";
+					op.value = i;
+					
+					selDiv.appendChild(op);
+				}
+				
+			}
+			
+			function show(){
+				let resDiv = document.getElementById("res");
+				let dan = Number(document.getElementById("num").value);
+				
+				let result = "";
+				
+				for(let i = 1; i <= 9; i++){
+					result += dan + " * " + i + " = " + dan*i + "<br>";
+				}
+				
+				resDiv.innerHTML = result;
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrap">
+			<select id="num">
+			</select>
+			
+			<input type="button" value="확인" onclick="show()"><br>
+			
+			<div id="res"></div>
+		</div>
+		
+	</body>
+</html>
