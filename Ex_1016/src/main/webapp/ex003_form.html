@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form2</title>
+		
+		<script>
+			function send(){
+				let f = document.ff;
+				
+				let name = f.myname.value;
+				let menu = f.sel.value;
+				
+				//p는 name 지정 안됨.
+				//let p = f.myp.innerHTML;
+				
+				// body에서 지정 가능.
+				//f.method = 'get';
+				//f.action = 'register.jsp';
+				
+				f.submit();
+				
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<form name="ff" 
+			  method="get"
+			  action="register.jsp">
+			<input name="myname"><br>
+			
+			<select name="sel">
+				<option value="s1">메뉴1</option>
+				<option value="s2">메뉴2</option>
+			</select>
+			
+			
+			<!-- p, a, div 등의 태그는 공식적인 form 태그의 자식이 아닐므로
+				 name 속성을 넣어도 form태그가 인지하기 못한다.
+				 <p name="myp">나는P</p> -->
+				 
+			
+			<input type="button" value="확인" onclick="send();">
+		</form>
+	</body>
+</html>

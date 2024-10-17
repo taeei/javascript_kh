@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form1</title>
+		
+		<script>
+			function check(){
+				//submit을 하기 위한 form태그를 검색
+				let f = document.forms[1]; //여러개 form태그 중 몇번째인지
+				
+				//form태그에 name속성이 m_id인 객체를 찾아서 value를 가져온다.
+				let id = f.m_id.value;
+				
+				let pw = f.m_pwd.value;
+				
+				// 유효성 체크
+				if( id === '' ){
+					alert("아이디는 필수");
+					return;	
+				}
+				
+				if( pw === '' ){
+					alert("비번 필수");
+					return;
+				}
+				
+				// 전송방식
+				// GET : 파라미터를 url에 노출(속도가 빠르다)
+				//f.method = 'GET';
+				
+				// POST : 파라미터를 url에 노출하지 않는다(속도가 느리다)
+				f.method = 'POST';
+				
+				// 이동할 페이지
+				f.action = 'login.jsp';
+				
+				// 입력된 파라미터를 전달. 해당 form태그의 모든 name값이 넘어간다.
+				f.submit(); 
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form></form>
+		
+		<!-- 서버로 값을 전달하고자 할 때 사용하는 태그 -->
+		<form>
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<td><input name="m_id"></td>
+				</tr>
+				
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="m_pwd"></td>
+				</tr>
+				
+				<tr>
+					<th>나이</th>
+					<td><input name="age"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center">
+						<!--<input type="submit" value="전송">-->
+						<input type="button" value="전송" onclick="check();">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

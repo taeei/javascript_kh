@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form5</title>
+		
+		<script>
+			function send( f ){
+				
+				f.submit();
+				
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<form method="get" action="test.jsp">
+			<input name="id"><br>
+			<input name="pwd" tye="password"><br>
+			
+			<!-- this는 확인 버튼을 의미
+			  	this.form은 '확인버튼'을 소유하고 있는 form태그 -->
+			<input type="button" value="확인" onclick="send(this.form);"> 
+		</form>
+	</body>
+</html>

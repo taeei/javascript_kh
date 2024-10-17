@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form3</title>
+		
+		<script>
+			function send(){
+				let f = document.getElementById("ff");
+				
+				let id = f.id.value;
+				let area = f.tarea.value;
+				
+				f.method = 'get';
+				f.action = 'test.jsp';
+				f.submit();
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<form id="ff">
+			<input name="id"><br>
+			<textarea name="tarea">
+textarea : 많은 텍스트를 저장할 수 있는 입력상자임	
+			</textarea>
+			
+			<input type="button" value="확인" onclick="send()">
+			
+		</form>
+	</body>
+</html>

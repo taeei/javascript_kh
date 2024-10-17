@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			window.onload = function(){
+				let year = document.getElementById("birth_year");
+				
+				for( let i = 1970; i <= 2024; i++  ){
+					let option = document.createElement("option");
+					option.innerHTML = i + "년";
+					option.value = i;
+					year.appendChild(option);
+				}//for
+			
+				let last_day = 31; // 윤년 계산을 위한 변수	
+			}
+			
+			function check_yoon(){
+				//선택한 연도가 윤년인지 체크
+				let year = document.getElementById("birth_year").value;
+				
+				//윤년 : 400의 배수이거나 4의 배수이면서 100의 배수가 아닌 경우
+				if( year % 400 == 0 ||
+						(year % 4 == 0 && year % 100 !=0) ){
+					last_day = 29;
+				}else{
+					last_day = 28;
+				}
+				
+				//월 추가
+				let month = document.getElementById("birth_month");
+				
+				month.innerHTML = "";
+				let opt = document.createElement('option');
+				opt.innerHTML = "월";
+				month.appendChild(opt);
+				
+				for( let i = 1; i <=12; i++ ){
+					let option = document.createElement("option");
+					option.innerHTML = i + "월";
+					option.value = i;
+					month.appendChild(option);
+				}//for
+				
+			}
+			
+			// 월 선택 함수
+			function monthChange( m ){
+				let day;
+				
+				switch( Number(m) ){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+					case 12:
+						day=31;
+						break;
+						
+					case 2:
+						day = last_day;
+						break;
+						
+					case 4: case 6:
+					case 9: case 10:
+						day = 30;
+						break;
+				}//switch
+				
+				let birth_day = document.getElementById('birth_day');
+				birth_day.innerHTML = "";
+				
+				for( let i = 1; i <= day; i++ ){
+					let option = document.createElement("option");
+					option.innerHTML = i;
+					option.value = i;
+					birth_day.appendChild(option);
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		생년월일(1970~2024) 
+		<select id="birth_year" onchange="check_yoon();">
+			<option value="">::년::</option>
+		</select>
+		
+		<!-- this : 현재 select 태그 
+			 this.value : 현재 select태그가 보여주고 있는 option의 value-->
+		<select id="birth_month" onchange="monthChange(this.value)"> 
+			<option value="">::월::</option>
+		</select>
+		
+		<select id="birth_day">
+			<option value="">::일::</option>
+		</select>
+	</body>
+</html>
