@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ex_1014-ex009 예제 답</title>
+		
+		<script>
+			// 1 ~ 100 사이의 난수
+			let rnd = Math.floor(Math.random() * 100) + 1;
+			//alert(rnd);
+			
+			let log_txt = "";
+			
+			function send(){
+				
+				let num = document.getElementById("num").value;
+				let log = document.getElementById("log");
+				let result = document.getElementById("result");	
+				
+				let p_num = /^[0-9]*$/;
+				if( !p_num.test(num) || 
+					num.trim() == '' || 
+					num.trim() < 1 || num.trim() > 100){
+						
+					alert("올바른 값을 입력해주세요");
+					return;
+				}
+					
+				log_txt += num + " ";
+				log.innerHTML = log_txt;
+				
+				if( num > rnd ){
+					result.innerHTML = "입력받은 값이 너무 큽니다";
+				}else if( num < rnd ){
+					result.innerHTML = "입력받은 값이 너무 작습니다";
+				}else{
+					result.innerHTML = "정답";
+				}
+			}		
+		</script>
+	</head>
+	
+	<body>
+		<p>1~100 사이의 숫자 중 하나를 입력해서 정답을 맞혀보세요</p>
+		<input id="num" size="5">
+		
+		<input type="button" value="확인" onclick="send();">
+		
+		<div id="log"></div>
+		
+		<div id="result"></div>
+	</body>
+</html>

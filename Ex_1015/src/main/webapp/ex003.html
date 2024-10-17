@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function checkInput(){
+				
+				let id = document.getElementById("txt").value;
+				let txt_sub = document.getElementById("txt_sub");
+				
+				if( id.trim() === '' ){
+					txt_sub.innerHTML = "아이디는 한글자 이상 입력하세요";
+				}else{
+					txt_sub.innerHTML = "";
+				}
+			}
+			
+			function checkChange(){
+				alert("txt2의 값이 변경되고 커서가 옮겨졌습니다")
+			}
+			
+			function changeSel(){
+				let sel = document.getElementById("m_select");
+				
+				if( sel.value !== '' ){ 
+					alert(sel.value);	
+				}
+			}
+			
+			function clearMenu(){
+				let sel = document.getElementById("m_select");
+				
+				// m_select태그가 가지고 있는 모든 option태그를 제서
+				sel.innerHTML = "";
+			}
+			
+		</script>
+	</head>
+	
+	
+	<body>
+		<!-- oninput : 입력상자 값이 변경될 때 마다 감지-->
+		<input id="txt" placeholder="input your id"
+			   oninput="checkInput();"><br>
+			   
+		<!-- onchange : 입력상자에서 커서가 옮겨질 때 -->
+		<input id="txt2" placeholder="input text"
+			   onchange="checkChange();">
+		
+		<div id="txt_sub">아이디는 한글자 이상 입력하세요</div>
+		
+		<select id="m_select" onchange="changeSel();">
+			<option value="">:::나는 메뉴:::</option>
+			<option value="1">메뉴1</option>
+			<option value="2">메뉴2</option>
+		</select>
+		
+		<input type="button" value="메뉴 초기화" onclick="clearMenu();">
+		
+	</body>
+</html>

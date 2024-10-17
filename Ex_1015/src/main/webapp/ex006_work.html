@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			window.onload = function(){
+				let yearsel = document.getElementById("year");
+				for(let i = 1970; i <= 2024; i++){
+					let year = document.createElement("option");
+					year.value = i;
+					year.innerHTML = i +"년";
+					yearsel.appendChild(year);				
+				}
+				
+				let monthsel = document.getElementById("month");
+				for(let i = 1; i <= 12; i++){
+					let month = document.createElement("option");
+					
+					month.value = i;
+					month.innerHTML = i + "월";
+					monthsel.appendChild(month);
+				}
+			}
+			
+			function changeDay(){
+				let year = document.getElementById("year").value;
+				if( year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)  ){
+					
+				}
+			}
+			
+		</script>
+	</head>
+	
+	
+	<body>
+		생년월일(1970~2024): <select id="year" onchange="changeDay();">
+			<option value="">::년::</option>
+		</select>
+		
+		<select id="month">
+			<option value="">::월::</option>
+		</select>
+		
+		<select id="day">
+			<option value="">::일::</option>
+		</select>
+	</body>
+</html>
